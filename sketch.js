@@ -59,7 +59,6 @@ function setup() {
   ground.addImage("ground",groundImage);
   ground.x = width/2
   ground.velocityX = -(6 + 3*score/100);
-  
 
 
   gameOver = createSprite(width/2,height/2- 50);
@@ -80,7 +79,7 @@ function setup() {
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
   
-  score = 0;//
+  score = 0;
 }
 
 function draw() {
@@ -98,11 +97,10 @@ function draw() {
     if((touches.length > 0 || keyDown("SPACE")) && controle.y  >= height-120) {
       jumpSound.play( )
       controle.velocityY = -15;
-      
        touches = [];
     }
     
-    controle.velocityY = controle.velocityY + 0.8
+    controle.velocityY = controle.velocityY + 0.8;
   
     if (ground.x < 0){
       ground.x = ground.width/2;
@@ -203,3 +201,4 @@ function reset(){
   score = 0;
   
 }
+
